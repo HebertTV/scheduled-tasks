@@ -16,6 +16,8 @@ params = {
     "cnt": 4
 }
 
+print("API_KEY exists:", API_KEY is not None)
+print("API_KEY length:", len(API_KEY) if API_KEY else 0)
 response = requests.get(url, params=params)
 response.raise_for_status()
 # print(response.text)
